@@ -11,4 +11,11 @@
                                                       | Continent     |
                                                       +----------------+
 ```
+graph TD;
+    Browser-->API;
+    Mobile-->API;
+    API-->Backend;
+    Backend-->DB;
+    DB-->Another_Continent;
+
 
