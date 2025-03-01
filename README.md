@@ -20,9 +20,9 @@ graph TD;
     C -->|/login Login Setup| E[Login Handler];
 ```
 ## setting up your Node.js backend
-1.) Install Node.js and npm
-2.) Create a Project Directory
-3.) initialize a Node.js project
+1. Install Node.js and npm
+2. Create a Project Directory
+3.  initialize a Node.js project
     ```node.js
         npm init
     ```
