@@ -28,7 +28,7 @@ graph TD;
         npm init
  ```
 4. Install Dependencies
-
+- for example:- 
 ```node.js
 npm install express
 ```
