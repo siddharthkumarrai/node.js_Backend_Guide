@@ -11,11 +11,12 @@
                                                       | Continent      |
                                                       +----------------+
 ```
-```mermaid
+```mermaid**
 graph TD;
     A[Computer/Mobile] -->|GET Request| B[Server];
     B -->|Response via Express| A;
     B -->|Listen| C[Routes];
     C -->|/ Home Route| D[Home Handler];
     C -->|/login Login Setup| E[Login Handler];
+```
 
