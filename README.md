@@ -11,7 +11,7 @@
                                                       | Continent     |
                                                       +----------------+
 ```
-```mermid
+```Mermaid
 graph TD;
     Browser-->API;
     Mobile-->API;
