@@ -24,7 +24,12 @@ graph TD;
 2. Create a Project Directory
 3.  initialize a Node.js project
    
-    ```node.js
+ ```node.js
         npm init
-    ```
+ ```
+4. Install Dependencies
+
+```node.js
+npm install express
+```
 
