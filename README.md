@@ -24,7 +24,7 @@ graph TD;
 2. Create a Project Directory
 3.  initialize a Node.js project
    
-    ```javascript
+    ```node.js
         npm init
     ```
 
