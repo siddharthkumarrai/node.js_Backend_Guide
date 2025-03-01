@@ -11,7 +11,7 @@
                                                       | Continent      |
                                                       +----------------+
 ```
-```mermaid**
+```mermaid
 graph TD;
     A[Computer/Mobile] -->|GET Request| B[Server];
     B -->|Response via Express| A;
