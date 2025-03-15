@@ -55,8 +55,6 @@ flowchart LR
         listen["listen"] --> home["/ : home route"]
         home --> login["/login : login setup"]
     end
-    
-    database["Database"] --> mongoose["mongoose"]
 
 
 
