@@ -113,7 +113,57 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
 ```
+ ## 2 Types of Import in Node.js
+ 1.  CommonJS (require)
+- Node.js ka default module system hai.
+- Yeh synchronous hota hai (blocking).
+- module.exports ke saath export hota hai.
+👉 file1.js (Export)
+```javascript
+const greet = () => {
+  console.log('Hello from CommonJS!');
+}
+
+module.exports = greet;
+```
+👉 file2.js (Import)
+```javascript
+const greet = require('./file1');
+greet(); // Output: Hello from CommonJS!
+```
+2. ES Modules (import/export)
+- Modern JavaScript ka module system hai.
+- Yeh asynchronous hota hai (non-blocking).
+- "type": "module" ko package.json me set karna padta hai ya .mjs extension use karni         padti hai.
+👉 file1.mjs (Export)
+```javascript
+export const greet = () => {
+  console.log('Hello from ES Modules!');
+}
+```
+👉 file2.mjs (Import)
+```javascript
+import { greet } from './file1.mjs';
+greet(); // Output: Hello from ES Modules!
+```
+
 ## How to connect frontend and backend in javascript 
-> backend
+> backend/server.js
+```javascript
+import express from 'express';
+
+const app = express();
+
+app.get('/',(req,res)=>{
+    res.send("server is ready");
+});
+
+const port = process.env.PORT || 3000
+
+app.listen(port,() => {
+    console.log(`server at https://localhost:${port}`}
+    }
+);
+
 > fronted 
 
