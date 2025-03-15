@@ -25,7 +25,7 @@ graph TD;
 3.  initialize a Node.js project
    
  ```node.js
-        npm init
+ npm init
  ```
 4. Install Dependencies
 - for example:- 
