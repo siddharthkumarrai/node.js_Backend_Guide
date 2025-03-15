@@ -99,19 +99,22 @@ $ npm install dotenv
 PORT=4000
 ```
 > index.js
-```javascript
-```diff
-+require('dotenv').config()
+```html
+<pre>
+<span style="background-color: #fffb8f; padding: 2px 4px; border-radius: 4px;">
+require('dotenv').config()
+</span>
 const express = require('express')
 const app = express()
 const port = process.env.PORT
 
 app.get('/', (req, res) => {
-  res.send('jai shri ram!')
+    res.send('jai shri ram!')
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
+</pre>
 ```
 
