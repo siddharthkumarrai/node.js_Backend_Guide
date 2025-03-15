@@ -46,6 +46,7 @@
 
 → **Utils**
 
+```mermaid
 flowchart LR
     client["Computer<br>Mobile"]
     server["Server"]
@@ -62,6 +63,7 @@ flowchart LR
     subgraph database["Database"]
         mongoose["mongoose"]
     end
+
 
     
 → **More (depends)**
