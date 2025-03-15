@@ -47,7 +47,7 @@
 → **Utils**
 
 # Express Server Architecture
-![Alt Text](https://res.cloudinary.com/dnknslaku/image/upload/v1742054467/Screenshot_2025-03-15_211052_rjgr3c.png)
+![Alt Text](https://res.cloudinary.com/dnknslaku/image/upload/w_400,h_300/v1742054467/Screenshot_2025-03-15_211052_rjgr3c.png)
 
     
 → **More (depends)**
