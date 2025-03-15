@@ -53,13 +53,27 @@
 1. Install Node.js and npm
 2. Create a Project Directory
 3.  initialize a Node.js project
-   
  ```node.js
  npm init
  ```
-4. Install Dependencies
-- for example:- 
-```node.js
-npm install express
+> index.js
+```javascript
+console.log("siddharth")
 ```
+> package.json
+```json
+"scripts":{
+    "start": node index.js"
+}
+```
+### To run index.js file
+```javascript
+npm run start
+```
+
+## install express
+```node
+$ npm install express
+```
+
 
