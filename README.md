@@ -100,10 +100,10 @@ PORT=4000
 ```
 > index.js
 ```diff
-! require('dotenv').config()
+- require('dotenv').config()
 const express = require('express')
 const app = express()
-! const port = process.env.PORT
+- const port = process.env.PORT
 
 app.get('/', (req, res) => {
     res.send('jai shri ram!')
