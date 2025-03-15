@@ -45,19 +45,23 @@
 → **Middlewares**
 
 → **Utils**
+
 ```mermaid
 flowchart LR
     client["Computer<br>Mobile"] -->|"get"| server["server"]
     server -->|"Express"| client
     
-    subgraph server_config[" "]
+    subgraph server_config["Server Configuration"]
         direction TB
         listen["listen"]
         home["/ : home route"]
         login["/login : login setup"]
     end
     
-    mongoose["mongoose"]
+    subgraph database["Database"]
+        mongoose["mongoose"]
+    end
+
 
     
 → **More (depends)**
