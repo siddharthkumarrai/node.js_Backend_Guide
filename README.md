@@ -24,14 +24,6 @@
                                                       | Continent      |
                                                       +----------------+
 ```
-```mermaid
-graph TD;
-    A[Computer/Mobile] -->|GET Request| B[Server];
-    B -->|Response via Express| A;
-    B -->|Listen| C[Routes];
-    C -->|/ Home Route| D[Home Handler];
-    C -->|/login Login Setup| E[Login Handler];
-```
 ## Project Structure
 
 → **Src**
@@ -54,6 +46,23 @@ graph TD;
 
 → **Utils**
 
+flowchart LR
+    client["Computer\nMobile"]
+    server["server"]
+    
+    client -- "get" --> server
+    server -- "Express" --> client
+    
+    subgraph server_config["Server Configuration"]
+        listen["listen"]
+        home["/ : home route"]
+        login["/login : login setup"]
+    end
+    
+    subgraph database["Database"]
+        mongoose["mongoose"]
+    end
+    
 → **More (depends)**
 ## setting up your Node.js backend
 1. Install Node.js and npm
