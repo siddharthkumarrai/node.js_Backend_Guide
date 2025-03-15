@@ -49,16 +49,13 @@
 flowchart LR
     client["Computer\nMobile"]
     server["server"]
-    
     client -- "get" --> server
     server -- "Express" --> client
-    
     subgraph server_config["Server Configuration"]
         listen["listen"]
         home["/ : home route"]
         login["/login : login setup"]
     end
-    
     subgraph database["Database"]
         mongoose["mongoose"]
     end
