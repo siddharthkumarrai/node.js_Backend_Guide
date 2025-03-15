@@ -52,15 +52,13 @@ flowchart LR
     server -->|"Express"| client
     
     subgraph server_config["Server Configuration"]
-        direction TB
-        listen["listen"]
-        home["/ : home route"]
-        login["/login : login setup"]
+        listen["listen"] --> home["/ : home route"]
+        home --> login["/login : login setup"]
     end
     
-    subgraph database["Database"]
-        mongoose["mongoose"]
-    end
+    database["Database"] --> mongoose["mongoose"]
+
+
 
 
     
