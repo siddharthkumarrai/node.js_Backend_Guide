@@ -46,18 +46,8 @@
 
 → **Utils**
 
-```mermaid
-flowchart LR
-    client["Computer<br>Mobile"] -->|"get"| server["server"]
-    server -->|"Express"| client
-    
-    subgraph server_config["Server Configuration"]
-        listen["listen"] --> home["/ : home route"]
-        home --> login["/login : login setup"]
-    end
-
-
-
+# Express Server Architecture
+![Alt Text](https://res.cloudinary.com/dnknslaku/image/upload/v1742054467/Screenshot_2025-03-15_211052_rjgr3c.png)
 
     
 → **More (depends)**
