@@ -67,13 +67,27 @@ console.log("siddharth")
 }
 ```
 ### To run index.js file
-```javascript
-npm run start
+```node.js
+$ npm run start
 ```
 
 ## install express
-```node
+```node.js
 $ npm install express
+```
+> index.js
+```javascript
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('jai shri ram!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 ```
 
 
