@@ -99,9 +99,10 @@ $ npm install dotenv
 PORT=4000
 ```
 > index.js
-```md
 ```javascript
-**require('dotenv').config()**  
+// ✅ HIGHLIGHTED LINE 👇  
+require('dotenv').config()
+// ✅ HIGHLIGHTED LINE 👆  
 const express = require('express')
 const app = express()
 const port = process.env.PORT
@@ -113,6 +114,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-```
 ```
 
