@@ -49,8 +49,6 @@
 # Express Server Architecture
 ![Alt Text](https://res.cloudinary.com/dnknslaku/image/upload/w_400,h_300/v1742054467/Screenshot_2025-03-15_211052_rjgr3c.png)
 
-    
-→ **More (depends)**
 ## setting up your Node.js backend
 1. Install Node.js and npm
 2. Create a Project Directory
