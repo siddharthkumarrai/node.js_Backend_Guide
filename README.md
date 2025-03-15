@@ -101,7 +101,7 @@ PORT=4000
 > index.js
 ```javascript
 ```diff
-+ require('dotenv').config()
++require('dotenv').config()
 const express = require('express')
 const app = express()
 const port = process.env.PORT
