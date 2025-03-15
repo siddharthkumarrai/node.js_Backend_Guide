@@ -164,6 +164,9 @@ app.listen(port,() => {
     console.log(`server at https://localhost:${port}`}
     }
 );
-
-> fronted 
+```
+> fronted
+```terminal
+PS D:\fullstack\frontend> npm create vite@latest .
+```
 
