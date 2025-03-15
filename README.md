@@ -1,4 +1,17 @@
-# NODE.JS BACKEND
+# Backend Development
+
+## 2 major components
+
+### A Programming Language
+- Java, JS, PHP, golang
+- C++
+- on a framework
+
+### A Database
+- Mongo, MySQL
+- Postgres, sqlite
+- ORM, ODM
+- 
 1.) a web and mobile-based application that interacts with a backend system and a remote database.
 ```node.js
 +---------+       +---------+       +---------+       +----------------+
