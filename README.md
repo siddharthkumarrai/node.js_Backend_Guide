@@ -11,7 +11,7 @@
 - Mongo, MySQL
 - Postgres, sqlite
 - ORM, ODM
-- 
+
 1.) a web and mobile-based application that interacts with a backend system and a remote database.
 ```node.js
 +---------+       +---------+       +---------+       +----------------+
@@ -32,6 +32,29 @@ graph TD;
     C -->|/ Home Route| D[Home Handler];
     C -->|/login Login Setup| E[Login Handler];
 ```
+## Project Structure
+
+→ **Src**
+  * index
+    → DB connects
+  * App
+    → config, cookie, urlEncode
+  * constants
+    → enums, DB-name
+
+→ **DB**
+
+→ **Models**
+
+→ **Controllers**
+
+→ **Routes**
+
+→ **Middlewares**
+
+→ **Utils**
+
+→ **More (depends)**
 ## setting up your Node.js backend
 1. Install Node.js and npm
 2. Create a Project Directory
