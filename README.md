@@ -93,4 +93,24 @@ app.listen(port, () => {
 ```terminal
 $ npm install dotenv
 ```
+- making .env file in root directory
+> .env
+```javascript
+PORT=4000
+```
+> index.js
+```javascript
+require('dotenv').config()
+const express = require('express')
+const app = express()
+const port = process.env.PORT
+
+app.get('/', (req, res) => {
+  res.send('jai shri ram!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
 
