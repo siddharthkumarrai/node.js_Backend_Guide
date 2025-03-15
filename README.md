@@ -46,18 +46,23 @@
 
 → **Utils**
 
-# Express Server Architecture
+flowchart LR
+    client["Computer<br>Mobile"]
+    server["Server"]
+    
+    client -->|"get"| server
+    server -->|"Express"| client
+    
+    subgraph server_config["Server Configuration"]
+        listen["listen"]
+        home["/ : home route"]
+        login["/login : login setup"]
+    end
+    
+    subgraph database["Database"]
+        mongoose["mongoose"]
+    end
 
-| | | get | | | | Computer | ────────────────> | | | Mobile | | server |
-| | Express | | | | <──────────────── | | └─────────────────┘ └─────────────────┘
-
-listen
-
-/ : home route
-
-/login : login setup
-
-mongoose
     
 → **More (depends)**
 ## setting up your Node.js backend
