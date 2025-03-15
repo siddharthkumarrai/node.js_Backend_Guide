@@ -48,20 +48,15 @@
 
 # Express Server Architecture
 
-┌─────────────────┐                      ┌─────────────────┐
-│                 │         get          │                 │
-│    Computer     │ ─────────────────>   │                 │
-│    Mobile       │                      │     server      │
-│                 │         Express      │                 │
-│                 │ <─────────────────   │                 │
-└─────────────────┘                      └─────────────────┘
+| | | get | | | | Computer | ────────────────> | | | Mobile | | server |
+| | Express | | | | <──────────────── | | └─────────────────┘ └─────────────────┘
 
-                                         listen
-                                         
-                                         / : home route
-                                         
-                                         /login : login setup
-                                         
+listen
+
+/ : home route
+
+/login : login setup
+
 mongoose
     
 → **More (depends)**
