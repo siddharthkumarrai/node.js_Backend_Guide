@@ -114,4 +114,6 @@ app.listen(port, () => {
 })
 ```
 ## How to connect frontend and backend in javascript 
+> backend
+> fronted 
 
