@@ -203,7 +203,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000")
+      .get("http://localhost:3000/api/userdata")
       .then((response) => {
         setUserData(response.data);
       })
