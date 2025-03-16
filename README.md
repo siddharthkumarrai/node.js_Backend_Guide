@@ -202,13 +202,13 @@ function App() {
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
-    - axios
-      - .get("http://localhost:3000")
-      - .then((response) => {
-      - setUserData(response.data);
+    -axios
+      -.get("http://localhost:3000")
+      -.then((response) => {
+      -setUserData(response.data);
       })
-      - .catch((error) => {
-      -  console.log(error);
+      .catch((error) => {
+       console.log(error);
       });
   });
 
