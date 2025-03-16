@@ -233,3 +233,17 @@ export default App;
 - console error ( CORS )
 ```diff
 - Access to XMLHttpRequest at 'http://localhost:3000/' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+## PROXY
+```diff
+  useEffect(() => {
+    axios
+    - .get("/api/userdata")
+      .then((response) => {
+        setUserData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+```
