@@ -194,4 +194,39 @@ export default App;
 ```node
 $ npm i axios
 ```
+```diff
+import { useState, useEffect } from "react";
+- import axios from "axios";
+
+function App() {
+  const [userData, setUserData] = useState([]);
+
+  useEffect(() => {
+    - axios
+      - .get("http://localhost:3000")
+      - .then((response) => {
+      - setUserData(response.data);
+      })
+      - .catch((error) => {
+      -  console.log(error);
+      });
+  });
+
+  return (
+    <>
+      <h1>userData</h1>
+      <p>{userData.length}</p>
+      {userData.map((user) => {
+        <div key={user.id}>
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
+          <p>{user.city}</p>
+        </div>;
+      })}
+    </>
+  );
+}
+
+export default App;
+```
 
