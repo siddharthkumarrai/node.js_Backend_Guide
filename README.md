@@ -190,4 +190,8 @@ function App() {
 
 export default App;
 ```
+## install axios
+```node
+$ npm i axios
+```
 
