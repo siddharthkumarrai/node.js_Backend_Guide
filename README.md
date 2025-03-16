@@ -199,12 +199,12 @@ import { useState, useEffect } from "react";
 - import axios from "axios";
 ```
 ```diff
-- function App() {
+function App() {
   const [userData, setUserData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000")
+-   useEffect(() => {
+     - axios
+     - .get("http://localhost:3000")
       .then((response) => {
         setUserData(response.data);
       })
