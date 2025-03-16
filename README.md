@@ -201,8 +201,9 @@ import { useState, useEffect } from "react";
 ```diff
 function App() {
   const [userData, setUserData] = useState([]);
-
--   useEffect(() => {
+```
+```diff
+  - useEffect(() => {
      - axios
      - .get("http://localhost:3000")
       .then((response) => {
