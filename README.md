@@ -169,4 +169,25 @@ app.listen(port,() => {
 ```terminal
 PS D:\fullstack\frontend> npm create vite@latest .
 ```
+> frontend/src/app.jsx
+```react.js
+function App() {
+  const [userData, setUserData] = useState([]);
+  return (
+    <>
+      <h1>userData</h1>
+      <p>{userData.length}</p>
+      {userData.map((user) => {
+        <div key={user.id}>
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
+          <p>{user.city}</p>
+        </div>;
+      })}
+    </>
+  );
+}
+
+export default App;
+```
 
