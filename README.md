@@ -194,18 +194,16 @@ export default App;
 ```node
 $ npm i axios
 ```
-```diff
+```react.js
 import { useState, useEffect } from "react";
-- import axios from "axios";
-```
-```diff
+import axios from "axios";
+
 function App() {
   const [userData, setUserData] = useState([]);
-```
-```diff
-  - useEffect(() => {
-     - axios
-     - .get("http://localhost:3000")
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000")
       .then((response) => {
         setUserData(response.data);
       })
