@@ -201,14 +201,14 @@ import { useState, useEffect } from "react";
 function App() {
   const [userData, setUserData] = useState([]);
 
-  useEffect(() => {
-    -axios
-      -.get("http://localhost:3000")
-      -.then((response) => {
-      -setUserData(response.data);
+  - useEffect(() => {
+    axios
+      .get("http://localhost:3000")
+      .then((response) => {
+        setUserData(response.data);
       })
       .catch((error) => {
-       console.log(error);
+        console.log(error);
       });
   });
 
@@ -228,5 +228,6 @@ function App() {
 }
 
 export default App;
+
 ```
 
