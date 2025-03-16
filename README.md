@@ -238,7 +238,7 @@ export default App;
 ```diff
   useEffect(() => {
     axios
-    - .get("/api/userdata")
+      .get("/api/userdata")
       .then((response) => {
         setUserData(response.data);
       })
