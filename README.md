@@ -230,4 +230,6 @@ function App() {
 export default App;
 
 ```
-
+- console error
+```diff
+- Access to XMLHttpRequest at 'http://localhost:3000/' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
