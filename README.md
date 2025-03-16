@@ -263,3 +263,74 @@ export default defineConfig({
   },
 });
 ```
+# Data Modeling/ Object Modeling Tools
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Type</th>
+      <th>Best For</th>
+      <th>Free Version</th>
+      <th>Platforms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Moon Modeler</b></td>
+      <td>Schema Designer</td>
+      <td>MongoDB, Firestore, DynamoDB</td>
+      <td>✅</td>
+      <td>Windows, Mac</td>
+    </tr>
+    <tr>
+      <td><b>Hackolade</b></td>
+      <td>Schema Designer</td>
+      <td>MongoDB, DynamoDB, Cassandra</td>
+      <td>✅ (Limited)</td>
+      <td>Windows, Mac</td>
+    </tr>
+    <tr>
+      <td><b>dbdiagram.io</b></td>
+      <td>Code-based</td>
+      <td>MongoDB</td>
+      <td>✅</td>
+      <td>Web</td>
+    </tr>
+    <tr>
+      <td><b>Draw.io</b></td>
+      <td>Diagram Builder</td>
+      <td>Tree-based model</td>
+      <td>✅</td>
+      <td>Web</td>
+    </tr>
+    <tr>
+      <td><b>MongoDB Compass</b></td>
+      <td>Data Explorer</td>
+      <td>MongoDB</td>
+      <td>✅</td>
+      <td>Windows, Mac, Linux</td>
+    </tr>
+    <tr>
+      <td><b>Archi</b></td>
+      <td>Diagram Builder</td>
+      <td>Firebase, DynamoDB</td>
+      <td>✅</td>
+      <td>Windows, Mac, Linux</td>
+    </tr>
+    <tr>
+      <td><b>Studio 3T</b></td>
+      <td>Schema Designer</td>
+      <td>MongoDB</td>
+      <td>Free Trial</td>
+      <td>Windows, Mac, Linux</td>
+    </tr>
+    <tr>
+      <td><b>NoSQL Workbench</b></td>
+      <td>Data Modeler</td>
+      <td>AWS DynamoDB</td>
+      <td>✅</td>
+      <td>Windows, Mac</td>
+    </tr>
+  </tbody>
+</table>
+
