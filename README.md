@@ -251,3 +251,13 @@ export default App;
 ```diff
 - GET https://localhost:5173/api/userdata  404 (Not Found)
 ```
+> vite.config.js
+```javascript
+export default defineConfig({
+  server: {
+    proxy: {
+      "/api": "https://localhost:3000",
+    },
+  },
+});
+```
