@@ -197,11 +197,12 @@ $ npm i axios
 ```diff
 import { useState, useEffect } from "react";
 - import axios from "axios";
-
-function App() {
+```
+```diff
+- function App() {
   const [userData, setUserData] = useState([]);
 
-  - useEffect(() => {
+  useEffect(() => {
     axios
       .get("http://localhost:3000")
       .then((response) => {
