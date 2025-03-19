@@ -333,6 +333,7 @@ export default defineConfig({
     </tr>
   </tbody>
 </table>
+
 ## Boilerplate code of models ( schema )
 > user.models.js
 ```javascript
