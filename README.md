@@ -333,4 +333,17 @@ export default defineConfig({
     </tr>
   </tbody>
 </table>
+## Boilerplate code of models ( schema )
+> user.models.js
+```javascript
+import mongoose from "mongoose
 
+const userSchema = new mongoose.Schema({
+username: {
+  type: string,
+  required: true
+}
+},{timestamps: true}}
+
+export const User = mongoose.model("User",userSchema)
+```
