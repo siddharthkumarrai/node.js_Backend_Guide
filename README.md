@@ -334,6 +334,43 @@ export default defineConfig({
   </tbody>
 </table>
 
+## Entity-Relationship Diagram
+
+```mermaid
+erDiagram
+    User {
+        ObjectId _id
+        String username
+        String email
+        String password
+        DateTime createdAt
+        DateTime updatedAt
+    }
+
+    Todo {
+        ObjectId _id
+        String content
+        Boolean complete
+        ObjectId createdBy
+        ObjectId[] subTodos
+        DateTime createdAt
+        DateTime updatedAt
+    }
+
+    SubTodo {
+        ObjectId _id
+        String content
+        Boolean complete
+        ObjectId createdBy
+        DateTime createdAt
+        DateTime updatedAt
+    }
+
+    User ||--o{ Todo : creates
+    Todo ||--o{ SubTodo : contains
+```
+
+
 ## Boilerplate code of models ( schema )
 ```javascript
 import mongoose from "mongoose"
