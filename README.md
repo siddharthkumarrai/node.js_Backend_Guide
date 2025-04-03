@@ -554,10 +554,10 @@ $touch .prettierrc .prettierignore
 .env.*
 ```
 ## Database Connection 
-#### Two thing know to talk to database
-###### use try catch
-###### use async await
-- Setup MongoDb Database
+### Two thing know to talk to database
+#### use try catch
+#### use async await
+<h1 style="color: red;">Setup MongoDb Database</h1>
 > .env
 ```.env
 PORT=8000
