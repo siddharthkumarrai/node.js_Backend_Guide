@@ -559,7 +559,7 @@ $touch .prettierrc .prettierignore
 #### use async await
 <h1 style="color: red;">Setup MongoDb Database</h1>
 > .env
-```.env
+```node
 PORT=8000
 MONGODB_URI=mongodb+srv://<db_username>:<db_password>@cluster0.yjhd9gi.mongodb.net
 ```
