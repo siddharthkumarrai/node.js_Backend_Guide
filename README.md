@@ -496,3 +496,61 @@ $ touch .env .env.sample
 $mkdir src
 ```
 > src
+```node
+$ touch index.js app.js constants.js
+```
+- install nodemon as a Dev dependency 
+```node
+$npm i -D nodemon
+```
+> package.json
+```json
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "production ready backend",
+  "main": "index.js",  ☑️
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"  ☑️
+  },
+  "author": "siddharth kumar rai",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
+```
+> src
+```node
+$mkdir controllers db middlewares models routes utils
+```
+- install prettier
+```node
+$npm i -D prettier
+```
+- root
+```node
+$touch .prettierrc .prettierignore
+```
+> .prettierrc
+```json
+{
+  "singleQuote": false,
+  "bracketSpacking": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
+  "semi": true
+}
+```
+> .prettierignore
+```json
+/.vscode
+/node_modules
+./dist
+
+*.env
+.env
+.env.*
+```
+
