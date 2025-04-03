@@ -553,4 +553,21 @@ $touch .prettierrc .prettierignore
 .env
 .env.*
 ```
-
+## Database Connection 
+#### Two thing know to talk to database
+###### use try catch
+###### use async await
+- Setup MongoDb Database
+> .env
+```.env
+PORT=8000
+MONGODB_URI=mongodb+srv://<db_username>:<db_password>@cluster0.yjhd9gi.mongodb.net
+```
+> constants.js
+```javascript
+export const DB_NAME = "videotube"
+```
+- install dependency
+```node
+$npm i mongoose express dotenv
+```
