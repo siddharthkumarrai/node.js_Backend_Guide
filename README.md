@@ -638,3 +638,56 @@ connectDB()
   },
 }
 ```
+> src/app.js
+```javascript
+import express from "express"
+
+const app = express()
+
+expoert { app }
+```
+> src/index.js
+```javascript
+// require(`dotenv`).config({path: "./env"})
+import dotenv from "dotenv
+import connectDB from "./db";
+
+dotenv.config({
+    path: './env'
+})
+
+connectDB()  
+.then(()) => {                                                            ☑️
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`server is running at port : ${process.env.PORT}`);
+    }
+}
+.catch((error) => {
+    console.log("MONGO db connection failed !!! ", error);
+)
+```
+- install dependency
+```node
+$npm i cookie-parser cors
+```
+> src/app.js
+```javascript
+import express from "express"
+import cors from "cors"
+import cookieParser from "cookie-parser"
+
+const app = express()
+
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+))
+
+app.use(express.json({limit: "16kb"}))   // handle data like form data (data from body)
+app.use(express.urlencoded({extended: true, limit: "16Kb"})) // handle url space convert %20
+app.use(express.static("public"))
+app.use(cookieParser())
+
+expoert { app }
+
+```
