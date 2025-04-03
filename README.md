@@ -575,7 +575,7 @@ $npm i mongoose express dotenv
 ## DATABASE CONNECTION APPROACH 
 #### APPROACH 1
   
-> index.js
+> src/index.js
 ```javascript
 import  mongoose from "mongoose";
 import { DB_NAME } from "./constants";
