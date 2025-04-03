@@ -487,7 +487,7 @@ $touch .gitignore
 ```
 - making environment variable file in root
 ```
-$ touch .env .env.sample
+$ touch .env .env.sample 
 ```
 > .env
 > .env.sample
