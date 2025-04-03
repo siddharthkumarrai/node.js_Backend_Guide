@@ -572,6 +572,7 @@ export const DB_NAME = "videotube"
 $npm i mongoose express dotenv
 ```
 ## APPROACH 1
+  
 > index.js
 ```javascript
 import  mongoose from "mongoose";
