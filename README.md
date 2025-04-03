@@ -572,7 +572,8 @@ export const DB_NAME = "videotube"
 ```node
 $npm i mongoose express dotenv
 ```
-## APPROACH 1
+## DATABASE CONNECTION APPROACH 
+#### APPROACH 1
   
 > index.js
 ```javascript
@@ -597,4 +598,41 @@ const app = express()
           throw err
       }
 )()
+```
+#### APPROACH 2
+> db/index.js
+```javascript
+import  mongoose from "mongoose";
+import { DB_NAME } from "./constants";
+
+const connectDB = async () => {
+    try {
+        const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`)
+console.log(`\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host} `);
+
+    } catch (error) {
+        console.log("MONGODB connection error ", error);
+        process.exit(1)
+    }
+}
+```
+> src/index.js
+```javascript
+// require(`dotenv`).config({path: "./env"})
+import dotenv from "dotenv
+import connectDB from "./db";
+
+dotenv.config({
+    path: './env'
+})
+
+connectDB()
+```
+> package.json
+```json
+{
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"  ☑️
+  },
+}
 ```
