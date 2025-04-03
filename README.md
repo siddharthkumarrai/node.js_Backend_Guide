@@ -333,43 +333,10 @@ export default defineConfig({
     </tr>
   </tbody>
 </table>
+
 # MongoDB Todo Application Schema
 
 This document provides a visual representation of the database schema and relationships for the Todo application using Mermaid.
-
-```mermaid
-graph LR
-    User[("User
-    ---
-    _id: ObjectId
-    username: String
-    email: String
-    password: String
-    createdAt: DateTime
-    updatedAt: DateTime")]
-
-    Todo[("Todo
-    ---
-    _id: ObjectId
-    content: String
-    complete: Boolean
-    createdBy: ObjectId
-    subTodos: ObjectId[]
-    createdAt: DateTime
-    updatedAt: DateTime")]
-
-    SubTodo[("SubTodo
-    ---
-    _id: ObjectId
-    content: String
-    complete: Boolean
-    createdBy: ObjectId
-    createdAt: DateTime
-    updatedAt: DateTime")]
-
-    User -->|1:N| Todo
-    Todo -->|1:N| SubTodo
-```
 
 ## Entity-Relationship Diagram
 ```mermaid
