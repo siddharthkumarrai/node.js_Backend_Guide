@@ -691,3 +691,63 @@ app.use(cookieParser())
 expoert { app }
 
 ```
+> utils/asynchandler.js
+```javascript
+- method 1
+const asyncHandler = (requestHandler) => {
+    (req,res,next) => {
+        promise.resolve(requestHandler(req,res,next)).catch((err) => next(err))
+    }
+}
+
+export {asyncHandler}
+
+
+
+- method 2
+const asyncHandler = (fn) => async (req,res,next) => {
+    try {
+        await fn(req,res,next)
+    } catch (error) {
+        res.status(error.code || 500).json({
+            success: false,
+            message: error.message
+        })
+}
+```
+> utils/ApiError.js
+```javascript
+class ApiError extends Error {
+    constructor{
+        statusCode,
+        message = "Something went wrong",
+        errors = [],
+        stack = ""
+    }{
+        super(message)
+        this.statusCode = statusCode
+        this.data = null
+        this.message = message
+        this.success = false;
+        this.errors = errors
+
+        if (stck) {
+            this.stack = stack
+        } else{
+            Error.captureStackTrace(this, this.constructor)
+        }
+    }
+}
+```
+> utils/ApiResponse
+```javascript
+class ApiResponse {
+    constructor(statusCode, data, message = "Success"){
+        this.statusCode = statusCode
+        this.data = data
+        this.message = message
+        this.success = statusCode < 400
+    }
+}
+```
+        
