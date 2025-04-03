@@ -335,16 +335,89 @@ export default defineConfig({
 </table>
 
 ## Boilerplate code of models ( schema )
+```javascript
+import mongoose from "mongoose"
+
+const todoSchema = new mongoose.Schema({},{timestamps: true})
+
+export const Todo = mongoose.model("Todo", todoSchema);
+```
+
 > user.models.js
 ```javascript
-import mongoose from "mongoose
+import mongoose from "mongoose"
 
 const userSchema = new mongoose.Schema({
-username: {
-  type: string,
-  required: true
-}
-},{timestamps: true}}
+      username: {
+         type: string,
+         required: true,
+         unique: true,
+         lowercase: true
+      },
+      email: {
+         type: String,
+         required: true,
+         unique: true,
+         lowercase: true
+      },
+      password: {
+         type: String,
+         required: true
+      }
 
-export const User = mongoose.model("User",userSchema)
+   }, {timestamps: true}
+}
+
+export const User = mongoose.model("User", userSchema)
 ```
+> sub_todo.models.js
+```javascript
+import mongoose from "mongoose"
+
+const todoSchema = new mongoose.Schema({
+   content: {
+      type: String,
+      required: true
+   },
+   complete: {
+      type: Boolean,
+      default: false
+   },
+   createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+   }
+}, {
+   timestamps: true
+})
+
+export const Todo = mongoose.model("Todo", todoSchema);
+```
+> todo.models.js
+```javascript
+import mongoose from "mongoose";
+
+const todoSchema = new mongoose.Schema({
+   content: {
+      type: String,
+      required: true,
+   },
+   complete: {
+      type: Boolean,
+      default: false
+   },
+   createdBy: {
+      type: mongoose.Schema.Types.ObjectId
+      ref: "User"
+   },
+   subTodos: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "SubTodo",
+   }, ],
+}, {
+   timestamps: true
+});
+
+export const Todo = mongoose.model("Todo", todoSchema);
+```
+
