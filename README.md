@@ -333,11 +333,15 @@ export default defineConfig({
     </tr>
   </tbody>
 </table>
+# MongoDB Todo Application Schema
+
+This document provides a visual representation of the database schema and relationships for the Todo application using Mermaid.
 
 ## Entity-Relationship Diagram
 
 ```mermaid
 erDiagram
+    direction LR
     User {
         ObjectId _id
         String username
@@ -369,8 +373,6 @@ erDiagram
     User ||--o{ Todo : creates
     Todo ||--o{ SubTodo : contains
 ```
-
-
 ## Boilerplate code of models ( schema )
 ```javascript
 import mongoose from "mongoose"
