@@ -338,42 +338,38 @@ export default defineConfig({
 This document provides a visual representation of the database schema and relationships for the Todo application using Mermaid.
 
 ## Entity-Relationship Diagram
-
-
 ```mermaid
-erDiagram
-    direction LR
-    
-    User {
-        ObjectId _id
-        String username
-        String email
-        String password
-        DateTime createdAt
-        DateTime updatedAt
-    }
+graph LR
+    User[("User
+    ---
+    _id: ObjectId
+    username: String
+    email: String
+    password: String
+    createdAt: DateTime
+    updatedAt: DateTime")]
 
-    Todo {
-        ObjectId _id
-        String content
-        Boolean complete
-        ObjectId createdBy
-        ObjectId[] subTodos
-        DateTime createdAt
-        DateTime updatedAt
-    }
+    Todo[("Todo
+    ---
+    _id: ObjectId
+    content: String
+    complete: Boolean
+    createdBy: ObjectId
+    subTodos: ObjectId[]
+    createdAt: DateTime
+    updatedAt: DateTime")]
 
-    SubTodo {
-        ObjectId _id
-        String content
-        Boolean complete
-        ObjectId createdBy
-        DateTime createdAt
-        DateTime updatedAt
-    }
+    SubTodo[("SubTodo
+    ---
+    _id: ObjectId
+    content: String
+    complete: Boolean
+    createdBy: ObjectId
+    createdAt: DateTime
+    updatedAt: DateTime")]
 
-    User ||--o{ Todo : creates
-    Todo ||--o{ SubTodo : contains
+    User -->|1:N| Todo
+    Todo -->|1:N| SubTodo
 ```
 
 ## Boilerplate code of models ( schema )
