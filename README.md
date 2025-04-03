@@ -459,4 +459,40 @@ const todoSchema = new mongoose.Schema({
 
 export const Todo = mongoose.model("Todo", todoSchema);
 ```
-
+# Setup Production Ready Backend
+- verify the node
+```node
+$node -v
+```
+- initialize a project
+```node
+$npm init
+```
+- track the empty folder
+```node
+$ mkdir public
+$ cd public
+$ mkdir temp
+$ cd temp
+$ touch .gitkeep
+```
+> public/temp/.gitkeep
+- making gitignore file in root directory 
+```node
+$touch .gitignore
+```
+> .gitignore
+```diff
+- use .gitignore generator tools to boilerplate code
+```
+- making environment variable file in root
+```
+$ touch .env .env.sample
+```
+> .env
+> .env.sample
+- root
+```node
+$mkdir src
+```
+> src
