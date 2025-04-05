@@ -509,8 +509,8 @@ $npm i -D nodemon
   "name": "backend",
   "version": "1.0.0",
   "description": "production ready backend",
-  "main": "index.js",  ☑️
-  "type": "module",
+  "main": "index.js",  
+  "type": "module",                ☑️
   "scripts": {
     "dev": "nodemon src/index.js"  ☑️
   },
