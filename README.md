@@ -284,7 +284,7 @@ export default defineConfig({
     </tr>
     <tr>
       <td><b>Hackolade</b></td>
-      <td>Schema Designer</td>
+      <td>Schema Designer</td> 
       <td>MongoDB, DynamoDB, Cassandra</td>
       <td>✅ (Limited)</td>
       <td>Windows, Mac</td>
