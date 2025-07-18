@@ -340,7 +340,7 @@ This document provides a visual representation of the database schema and relati
 
 ## Entity-Relationship Diagram
 ```mermaid
-graph LR
+graph LR 
     User[("User
     ---
     _id: ObjectId
